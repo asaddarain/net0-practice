@@ -7,53 +7,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Net-0 Responsive UI</title>
     <link rel="stylesheet" href="../dist/output.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <!-- Body -->
 
 <body>
 
-    <!-- NavBar -->
-    <!-- navbar pt-1 -->
-    <div class="flex items-center justify-between w-full py-3 px-16 bg-white fixed z-40 shadow-lg">
-        <div>
+    <!--NavBar-->
+    <nav class="flex items-center justify-between w-full py-3 px-16 bg-white fixed z-40 shadow-lg md:px-8">
+        <!-- navbar (Logo) -->
+        <section class="">
             <a href="index.html">
                 <img class="w-32" src="./6049174e464ad826a1d1f27e_net0_logo_1.png" alt="">
             </a>
-        </div>
-        <!-- navbar pt-2 -->
+        </section>
+        <!-- navbar (li-anchor links) -->
         <ul class="font-semibold hidden lg:flex">
-            <li class="px-8 hover:cursor-pointer ">
+            <li class="px-6 hover:cursor-pointer flex items-center space-x-1">
                 <a href="">Why NetO?</a>
-                <span class="inline-block bg-primary-500"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
             </li>
-            <li class="px-8 hover:cursor-pointer ">
+            <li class="px-6 hover:cursor-pointer flex items-center space-x-1">
                 <a href="">Platform</a>
-                <span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
             </li>
-            <li class="px-8 hover:cursor-pointer ">
+            <li class="px-6 hover:cursor-pointer flex items-center space-x-1">
                 <a href="">Solutions</a>
-                <span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
             </li>
-            <li class=" px-8 hover:cursor-pointer ">
+            <li class=" px-6 hover:cursor-pointer flex items-center space-x-1">
                 <a href="">Company</a>
-                <span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
             </li>
-            <li class="px-8 hover:cursor-pointer ">
+            <li class="px-6 hover:cursor-pointer ">
                 <a href="">Blog</a>
-                <span></span>
             </li>
         </ul>
-        <!-- navbar pt-3 -->
-        <a class="border-2 border-slate-900 font-medium py-3 px-6 rounded-lg hover:bg-slate-900 hover:text-white hover:transition-colors"
-            href="">Request a
-            demo</a>
-        <!-- Hamburger(Menubar) -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 block lg:hidden" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-    </div>
+        <!-- navbar section-3 (Request a demo button| & |hamburger bar) -->
+        <section class="flex items-center">
+            <!-- navbar (Request a demo button) -->
+            <a class="border-2 border-slate-900 font-medium py-3.5
+             px-5 rounded-lg hover:bg-slate-900 hover:text-white hidden sm:flex" href="">Request a demo</a>
+            <!-- Hamburger(Menubar) -->
+            <button id="menu-bar" class="py-4 pl-10 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </section>
+    </nav>
+    <!-- ------------------------------------------------ -->
+
+    <!-- Aside Section-->
+    <section id="open-overlay" class="hidden fixed bg-white w-full h-full z-30">
+        <!-- ul-li -->
+        <ul class="flex flex-col items-center justify-center py-40 font-semibold">
+            <li class="px-8 pb-12 hover:cursor-pointer">
+                <a class="flex flex-row items-center" href="">Why NetO?
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+
+            </li>
+            <li class="px-8 pb-12 hover:cursor-pointer ">
+                <a class="flex flex-row items-center" href="">Platform
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li class="px-8 pb-12 hover:cursor-pointer ">
+                <a class="flex flex-row items-center" href="">Solutions
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li class=" px-8 pb-12 hover:cursor-pointer ">
+                <a class="flex flex-row items-center" href="">Company
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </li>
+            <li class="px-8 pb-12 hover:cursor-pointer ">
+                <a href="">Blog</a>
+            </li>
+        </ul>
+    </section>
+
+
     <!-- ------------------------------------------------ -->
 
     <!-- Div 1 -->
